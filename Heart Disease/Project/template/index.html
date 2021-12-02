@@ -1,0 +1,111 @@
+{% extends "basic.html" %}
+{% block body %}
+<style>
+        body {
+                background: url(' {{url_for('static',filename='img/contact.jpg')}} ') no-repeat center center fixed;
+        }
+        #upload{
+                background-color: rgb(51, 0, 255);
+        }
+        #form{
+                margin-top: 4px;
+                margin-bottom: 100px;
+        }
+        
+        
+</style>
+
+<div class="container" id="form" style="border:2px solid black;">
+        <form action="/prediction" method="post">
+                <table class="table table-dark table-hover">
+                        
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td><label for="age" class="form-label">age</label></td>
+                                    <td><input type="number"  class="form-control" name="age" id="age"></td>
+                                  </tr> 
+                                
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td><label for="cp" class="form-label">cp</label></td>
+                                    <td><input type="number" class="form-control" name="cp" id="cp"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td><label for="trestbps" class="form-label">trestbps</label></td>
+                                    <td><input type="number" name="trestbps" class="form-control" id="trestbps"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td><label for="chol" class="form-label">chol</label></td>
+                                    <td><input type="number" name="chol" class="form-control" id="chol"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td><label for="fbs" class="form-label">fbs</label></td>
+                                    <td><input type="number"  name="fbs" class="form-control" id="fbs"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">6</th>
+                                    <td><label for="restecg" class="form-label">restecg</label></td>
+                                    <td><input type="number" name="restecg" class="form-control" id="restecg"></td>
+                                  </tr> 
+                               
+                                  <tr>
+                                    <th scope="row">7</th>
+                                    <td><label for="thalachs" class="form-label">thalachs</label></td>
+                                    <td><input type="number"  class="form-control" name="thalachs" id="thalachs"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td><label for="exang" class="form-label">exang</label></td>
+                                    <td><input type="number" name="exang" class="form-control" id="exang"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">9</th>
+                                    <td><label for="oldpeak" class="form-label">oldpeak</label></td>
+                                    <td><input type="number" step=0.01 name="oldpeak" class="form-control" id="oldpeak"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">10</th>
+                                    <td><label for="slope" class="form-label">slope</label></td>
+                                    <td><input type="number" name="slope" class="form-control" id="slope"></td>
+                                  </tr>
+                                 
+                                  <tr>
+                                    <th scope="row">11</th>
+                                    <td><label for="ca" class="form-label">ca</label></td>
+                                    <td><input type="number"  name="ca" class="form-control" id="ca"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">12</th>
+                                    <td><label for="thal" class="form-label">thal</label></td>
+                                    <td><input type="number" name="thal" class="form-control" id="thal"></td>
+                                  </tr> 
+                                 
+                                 
+                                </tbody>
+                              
+                      </table>
+                      
+                <button class="btn btn-primary float-end" type="submit" id="msg">Predict</button>
+                      
+        </form>
+</div>
+<script>
+        let msg = document.getElementById('msg')
+msg.addEventListener('click',function(){
+  alert('Your Image file successfully submited. Wait for the prediction');  
+document.location = '/prediction'
+});
+</script> 
+{% endblock %}
