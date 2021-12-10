@@ -1,0 +1,172 @@
+{% extends "basic.html" %}
+{% block body %}
+<style>
+        body {
+                background: url(' {{url_for('static',filename='img/contact.jpg')}} ') no-repeat center center fixed;
+        }
+        #upload{
+                background-color: rgb(51, 0, 255);
+        }
+        #form{
+                margin-top: 4px;
+                margin-bottom: 100px;
+        }
+        
+        
+</style>
+
+<div class="container" id="form" style="border:2px solid black;">
+        <form action="/prediction" method="post">
+                <table class="table table-dark table-hover">
+                        
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td><label for="sex" class="form-label">sex</label></td>
+                                    <td><select name="sex" id="sex">
+                                      <option selected >select</option>
+                                      <option value="1">Male</option>
+                                      <option value="0">Female</option>
+                                    </select></td>
+                                  </tr> 
+
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td><label for="age" class="form-label">age</label></td>
+                                    <td><input type="number" class="form-control" name="age" id="age"></td>
+                                  </tr>
+                                
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td><label for="address" class="form-label">address</label></td>
+                                    <td><select name="address" id="address">
+                                      <option selected >select</option>
+                                      <option value="1">U</option>
+                                      <option value="0">R</option>
+                                    </select></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td><label for="Medu" class="form-label">Medu</label></td>
+                                    <td><select name="Medu" id="Medu">
+                                      <option selected >select</option>
+                                      <option value="0">0</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                    </select></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td><label for="Fedu" class="form-label">Fedu</label></td>
+                                    <td><select name="Fedu" id="Fedu">
+                                      <option selected >select</option>
+                                      <option value="0">0</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                    </select></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">6</th>
+                                    <td><label for="traveltime" class="form-label">traveltime</label></td>
+                                    <td><select name="traveltime" id="traveltime">
+                                      <option selected >select</option>
+                                      
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">7</th>
+                                    <td><label for="failures" class="form-label">failures</label></td>
+                                    <td><select name="failures" id="failures">
+                                      <option selected >select</option>
+                                      <option value="0">0</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      
+                                    </select></td>
+                                  </tr> 
+                               
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td><label for="paid" class="form-label">paid</label></td>
+                                    <td><select name="paid" id="paid">
+                                      <option selected >select</option>
+                                      <option value="1">Yes</option>
+                                      <option value="0">No</option>
+                                    </select></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">9</th>
+                                    <td><label for="higher" class="form-label">higher</label></td>
+                                    <td><select name="higher" id="higher">
+                                      <option selected >select</option>
+                                      <option value="1">Yes</option>
+                                      <option value="0">No</option>
+                                    </select></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">10</th>
+                                    <td><label for="internet" class="form-label">internet</label></td>
+                                    <td><select name="internet" id="internet">
+                                      <option selected >select</option>
+                                      <option value="1">Yes</option>
+                                      <option value="0">No</option>
+                                    </select></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">11</th>
+                                    <td><label for="goout" class="form-label">goout</label></td>
+                                    <td><select name="goout" id="goout">
+                                      <option selected >select</option>
+                                      
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                  </tr> 
+                                  </tr>
+                                 
+                                  <tr>
+                                    <th scope="row">12</th>
+                                    <td><label for="G1" class="form-label">G1</label></td>
+                                    <td><input type="number"  name="G1" class="form-control" id="G1"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">13</th>
+                                    <td><label for="G2" class="form-label">G2</label></td>
+                                    <td><input type="number" name="G2" class="form-control" id="G2"></td>
+                                  </tr> 
+                                 
+                                 
+                                </tbody>
+                              
+                      </table>
+                      
+                <button class="btn btn-primary float-end" type="submit" id="msg">Predict</button>
+                      
+        </form>
+</div>
+<script>
+        let msg = document.getElementById('msg')
+msg.addEventListener('click',function(){
+  alert('Your Imsex file successfully submited. Wait for the prediction');  
+document.loG1tion = '/prediction'
+});
+</script> 
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "basic.html" %}
+{% block body %}
+<style>
+    body {
+        background: url('{{url_for('static',filename='img/school.jpg')}}') ;
+        /* -webkit-background-size: cover; */
+        background-repeat: no-repeat;
+        
+        background-size: cover;
+    }
+</style>
+<div class="container">
+   
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+              <h1 style = "color: rgb(37, 226, 226);"> Congo!</h1>
+              <i class="bi bi-chevron-double-right"></i>
+    </span>
+        <hr>
+        <div class="justify-content-center align-items-center my-5 ">
+        <br>
+      <pre> <h4><p name="prediction" id="prediction" style = "color: rgb(133, 16, 7);">{{ prediction_text }} </p></h4></pre> 
+    </div>
+    <hr>
+    <br> 
+    <!-- <div class="container">
+        <div class=" justify-content-center align-items-center mx-5 " style="position: absolute;">
+            <ul class="list-relative text-center">
+             <a href="http://">  <li style="color: black;">1</li></a> 
+             <a href="http://">  <li style="color: black;">2</li></a> 
+             <a href="http://">  <li style="color: black;">3</li></a> 
+             <a href="http://">  <li style="color: black;">4</li></a> 
+            </ul>
+        </div>
+    </div> -->
+</div>
+
+
+{% endblock %}
