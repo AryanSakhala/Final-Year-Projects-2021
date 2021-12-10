@@ -1,0 +1,138 @@
+{% extends "basic.html" %}
+{% block body %}
+<style>
+        body {
+                background: url(' {{url_for('static',filename='img/contact.jpg')}} ') no-repeat center center fixed;
+        }
+        #upload{
+                background-color: rgb(51, 0, 255);
+        }
+        #form{
+                margin-top: 4px;
+                margin-bottom: 100px;
+        }
+        
+        
+</style>
+
+<div class="container" id="form" style="border:2px solid black;">
+        <form action="/prediction" method="post">
+                <table class="table table-dark table-hover">
+                        
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td><label for="Account_length" class="form-label">Account length</label></td>
+                                    <td><input type="number" step=0.01 class="form-control" name="Account_length" id="Account_length"></td>
+                                  </tr> 
+                                  <!-- <tr>
+                                    <th scope="row">3</th>
+                                    <td><label for="Area_code" class="form-label">Area code</label></td>
+                                    <td><input type="number" class="form-control" name="Area_code" id="Area_code"></td>
+                                  </tr> -->
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td><label for="International_plan" class="form-label">International plan</label></td>
+                                    <td><input type="number" class="form-control" name="International_plan" id="International_plan"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td><label for="Voice_mail_plan" class="form-label">Voice mail plan</label></td>
+                                    <td><input type="text" name="Voice_mail_plan" class="form-control" id="Voice_mail_plan"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">6</th>
+                                    <td><label for="Number_vmail_messages" class="form-label">Number vmail messages</label></td>
+                                    <td><input type="number" name="Number_vmail_messages" class="form-control" id="Number_vmail_messages"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">7</th>
+                                    <td><label for="Total_day_minutes" class="form-label">Total day minutes</label></td>
+                                    <td><input type="number" step=0.01 name="Total_day_minutes" class="form-control" id="Total_day_minutes"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">8</th>
+                                    <td><label for="Total_day_calls" class="form-label">Total day calls</label></td>
+                                    <td><input type="number" name="Total_day_calls" class="form-control" id="Total_day_calls"></td>
+                                  </tr> 
+                                  <!-- <tr>
+                                    <th scope="row">9</th>
+                                    <td><label for="Total_day_charge" class="form-label">Total day charge</label></td>
+                                    <td><input type="number" step=0.01 name="Total_day_charge" class="form-control" id="Total_day_charge"></td>
+                                  </tr> -->
+                                  tr>
+                                    <th scope="row">10</th>
+                                    <td><label for="Total_eve_minutes" class="form-label">Total eve minutes</label></td>
+                                    <td><input type="number" step=0.01 class="form-control" name="Total_eve_minutes" id="Total_eve_minutes"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">11</th>
+                                    <td><label for="Total_eve_calls" class="form-label">Total eve calls</label></td>
+                                    <td><input type="number" name="Total_eve_calls" class="form-control" id="Total_eve_calls"></td>
+                                  </tr> 
+                                  <!-- <tr>
+                                    <th scope="row">12</th>
+                                    <td><label for="Total_eve_charge" class="form-label">Total eve charge</label></td>
+                                    <td><input type="number" step=0.01 name="Total_eve_charge" class="form-control" id="Total_eve_charge"></td>
+                                  </tr> -->
+                                  
+                                    <th scope="row">13</th>
+                                    <td><label for="Total_night_minutes" class="form-label">Total night minutes</label></td>
+                                    <td><input type="number" step=0.01 name="Total_night_minutes" class="form-control" id="Total_night_minutes"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">14</th>
+                                    <td><label for="Total_night_calls" class="form-label">Total night calls</label></td>
+                                    <td><input type="number" name="Total_night_calls" class="form-control" id="Total_night_calls"></td>
+                                  </tr>
+                                  <!-- <tr>
+                                    <th scope="row">15</th>
+                                    <td><label for="Total_night_charge" class="form-label">Total night charge</label></td>
+                                    <td><input type="number"  step=0.01 name="Total_night_charge" class="form-control" id="Total_night_charge"></td>
+                                  </tr> -->
+                                  <tr>
+                                    <th scope="row">16</th>
+                                    <td><label for="Total_intl_minutes" class="form-label">Total intl minutes</label></td>
+                                    <td><input type="number" step=0.01 name="Total_intl_minutes" class="form-control" id="Total_intl_minutes"></td>
+                                  </tr> 
+                                  <tr>
+                                    <th scope="row">17</th>
+                                    <td><label for="Total_intl_calls" class="form-label">Total intl calls</label></td>
+                                    <td><input type="number" name="Total_intl_calls" class="form-control" id="Total_intl_calls"></td>
+                                  </tr> 
+                                  <!-- <tr>
+                                    <th scope="row">18</th>
+                                    <td><label for="Total_intl_charge" class="form-label">Total intl charge</label></td>
+                                    <td><input type="number" step=0.01  class="form-control" name="Total_intl_charge" id="Total_intl_charge"></td>
+                                  </tr> -->
+                                  <tr>
+                                    <th scope="row">19</th>
+                                    <td><label for="Customer_service_calls" class="form-label">Customer service calls</label></td>
+                                    <td><input type="number" class="form-control" name="Customer_service_calls" id="Customer_service_calls"></td>
+                                  </tr>
+                                  
+                                 
+                                </tbody>
+                              
+                      </table>
+                      
+                <button class="btn btn-primary float-end" type="submit" id="msg">Predict</button>
+                      
+        </form>
+</div>
+<script>
+        let msg = document.getElementById('msg')
+msg.addEventListener('click',function(){
+  alert('Your Image file successfully submited. Wait for the prediction');  
+document.location = '/prediction'
+});
+</script> 
+{% endblock %}
