@@ -1,0 +1,13 @@
+{
+  "params": {
+    "app_name": "abc",
+    "fb_url": "https://facebook.com/#",
+    "tw_url": "https://twitter.com/#",
+    "gt_url": "https://github.com/#",
+    "insta_url": "https://instagram.com/#",
+
+    "logo" : "logo.jpg" ,
+    "admin_user" : "AryanSakhala" ,
+    "admin_password" : "aryan123"
+  }
+} 
